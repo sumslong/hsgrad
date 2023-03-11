@@ -1,6 +1,6 @@
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto; /* Center the container horizontally */
   }
 
@@ -13,3 +13,7 @@
 body {
     background-color: #ddccde
 }
+
+* {
+    font-family: 'Work Sans',Arial, Helvetica, sans-serif;
+  }
