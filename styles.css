@@ -11,7 +11,7 @@
   }
   
 body {
-    background-color: #ddccde
+    background-color: #e8f4f0
 }
 
 * {
@@ -36,4 +36,13 @@ table, th, td {
     white-space: pre;
     z-index: 300;
     visibility: hidden;
+  }
+
+  div {
+    display: block;
+    max-width:100%
+  }
+  
+  iframe {
+    border: none;
   }

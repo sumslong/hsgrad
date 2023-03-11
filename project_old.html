@@ -7,9 +7,7 @@
     <title>Examining High School Completion Rates for Youth in Foster Care</title>
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.plot.ly/plotly-latest.min.css" />
-<body>
+
 <div class="container">
     <h1>Examining High School Completion Rates for Youth in Foster Care</h1>
     <h2>Introduction</h2>
@@ -121,56 +119,13 @@
     </p>
     <h2>Data Visualizations</h2>
     <h3>Who is in the Dataset?</h3>
-    <p>
-        Note: Summary statistics are not easily available for youth in foster care that are Age 17 and have had their 17th birthday in foster care. 
-        In lieu of that, I will be comparing the cohort to the demographic breakdown of foster care as a whole. It is an estimate, not an assurance, of the cohort's representativeness.
-        Data for cohort comparison derived from Foster Care Statistics 2019.
-    </p>
     <div style="text-align: center">
         <img src="population-gender-donut-chart.png" alt="Donut charts displaying population breakdown by gender">
       </div>
-    <p>
-        Girls could be overrepresented in the cohort. Not only are the cohorts more than 50% female, but the foster care population is more than 50% male.
-    </p>
     <div style="text-align: center">
         <img src="racial-distribution-barchart.png" alt="Donut charts displaying population breakdown by gender">
     </div>
-    <p>
-        White, Black, Native American, Asian, Hawaiian/Pacific Islander, and Hispanic (of any race) youth could be accurately represented in the cohort.
-        However, the non-insigficant sum of youth either declined to answer, or stated that they did not know their race. If the youth who declined to answer are disporoportionately one race, then the cohort could be not representative of the Baseline population.
-    </p>
-    <iframe src="plot.html" width="1200" height="850" style="text-align: center"></iframe>
-    <p>
-        This map is interactive. Hover over the state to view the participation percentage.<br>
-        <br>There is stark variation in state representation relative to the Baseline population, even when accounting for sampling done by some states. Since states have the discretion to administer the survey in an avenue they choose, it is not surprising that some have high participation (~70%) while others have low participation (~20%). The lowest state, Arizona, has ~4% participation.
-    </p>
-    <h2>Who Graduates?</h2>
-    <iframe src="grad_line_plot.html" width="1200" height="750" style="text-align: center"></iframe>
-    <p>
-        All 50 states, District of Columbia, and Overall rate displayed by default. Scroll through the legend page to see what color the state you're looking for is, or hover over a particular line to see what state it is. You can toggle to display only a particular state with the drop-down menu. If you wish to return to the original display with all rates, refresh the page.<br>
-        <br>There were some states that I suspect to have errornous data in Cohort 2014: South Dakota, Colorado, Illinois, and West Virginia. The categorical representation for 'blank' response was '77.0', but these states contain '78.0' in the value for highest education attained and therefore were not converted to a category when loaded into a dataframe. They were considered to be 'none of the above'. Illinois had the lowest errornous entries, with only 4. West Virginia had the most with 139. In Cohort 2011, these states also had 'blank' entries disporoportionately to other states.<br>
-        <br>There were no abnormalities with Cohort 2017. 
-    </p>
-    <iframe src="grad_plot.html" width="1200" height="850" style="text-align: center"></iframe>
-    <p>
-        This map is interactive. Hover over the state to view the graduation percentage. States South Dakota, Colorado, Illinois, and West Virginia potentially affected by errornous data entry.
-    </p>
-    <div style="text-align: center">
-        <img src="graduation-gender-donut-chart.png" alt="Donut charts displaying graduation breakdown by gender">
-      </div>
-      <p>
-        In all cohorts, females graduate at higher rates than males.
-    </p>
-      <div style="text-align: center">
-        <img src="racial-graduation-barchart.png" alt="Donut charts displaying graduation breakdown by gender">
-      </div>
-      <p>
-        Interestingly, there is some variation observed between cohorts. In 3 out of the 4 charts, those who declined to state their race graduated at the highest rates compared to others. 
-    </p>
-    <h2>Next Steps</h2>
-        Understanding the demographic of the population is a key first step in analyzing factors for high school completion.<br>
-        <br>In addition to variables used to create charts, the data contains a rich set of information including (but not limited to): public assistance utilization, foster care status, incarceration history, and homelessness history.<br>
-        <br>I have already made summary statistics for the three cohorts to identify factors highly correlated with graduation. Then, to investigate the statistical significance, I plan on building and testing Logistic Regression models.<br>
-        <br>I plan on building multiple classification machine learning models to predict if a youth will graduate high school by Age 19. Noting that there are ethical concerns with using machine learning in child welfare, I argue that this is the best-suited context to use it in: youth are fully, voluntarily answering questions. The model would allow agencies to give more resources to those who are at risk of not graduating high school without taking away resources from those who "do not need it." As more cohorts complete and release, the model's accuracy can be improved.
+    <div id="plot"></div>
 </div>
-</body>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script> 
