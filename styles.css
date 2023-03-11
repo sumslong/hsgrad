@@ -1,0 +1,15 @@
+
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* Center the container horizontally */
+  }
+
+.text {
+    max-width: 500px;
+    word-wrap: break-word; /* Break words across multiple lines */
+    word-break: break-all; /* Break words at any character */
+  }
+  
+body {
+    background-color: #ddccde
+}
